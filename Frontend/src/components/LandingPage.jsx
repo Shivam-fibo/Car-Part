@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import CarPartCard from './CarPartCard';
 import carPartsData from '../data/carPartsData';
 import MarketingSection from './MarketingSection';
+import CarPartsList from './CarPartsList';
 
 const LandingPage = () => {
 
@@ -50,11 +51,13 @@ const LandingPage = () => {
 
         <section className="bg-white text-gray-800" >
           <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+          <CarPartsList parts={carPartsData} />
             {/* Render the common marketing section */}
-            <MarketingSection />
+            <MarketingSection  />
 
             {/* Render the grid of car part cards */}
             <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3" ref={carPartsRef}>
+           
               {carPartsData.map((part) => (
                 <CarPartCard key={part.id} part={part} />
               ))}
