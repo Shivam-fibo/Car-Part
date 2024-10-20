@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import ContactUs from './pages/ContactUs';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import AboutUs from './pages/AboutUs';
+import CarPartSelector from './components/CarPartSelector';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/contactUs' element = {<ContactUs/>} />
         <Route path='/privacy' element = {<PrivacyPolicy/>} />
         <Route path='/aboutUs' element = {<AboutUs/>} />
+        <Route path='/CarPartSelector' element = {<CarPartSelector/>} />
       </Routes>
       <Footer />
     </Router>

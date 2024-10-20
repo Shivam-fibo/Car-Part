@@ -3,6 +3,7 @@ import CarPartCard from './CarPartCard';
 import carPartsData from '../data/carPartsData';
 import MarketingSection from './MarketingSection';
 import CarPartsList from './CarPartsList';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
 
@@ -34,7 +35,9 @@ const LandingPage = () => {
                     Shop Now
                   </button>
                   <button className="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900">
-                    Learn More
+                  <Link to="CarPartSelector">
+                    Shop by your car
+                    </Link>
                   </button>
                 </div>
               </div>
