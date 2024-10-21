@@ -6,17 +6,17 @@ const carPartsData = [
     image: '/radiator.jpg',
     items: [
       {
-        id: 'radiators-1',
+        id: 'Duralast Radiator B13067',
         name: 'Standard Radiator',
         description: 'A basic radiator suitable for most cars.',
-        image: '/radiator.jpg',
+        image: '/img1.avif',
         price: 150.00, 
       },
       {
-        id: 'radiators-2',
+        id: 'Duralast Radiator B1516',
         name: 'Performance Radiator',
         description: 'Designed for enhanced cooling efficiency.',
-        image: '/radiator.jpg',
+        image: '/img2.avif',
         price: 250.00, 
       }
     ]
@@ -28,17 +28,17 @@ const carPartsData = [
     image: '/suspension.avif',
     items: [
       {
-        id: 'suspension-1',
+        id: 'Duralast Loaded Strut Assembly LS53-90921R',
         name: 'Shock Absorbers',
         description: 'Helps dampen the impact of road bumps.',
-        image: '/suspension.avif',
-        price: 100.00, 
+        image: '/img3.webp',
+        price: 209.00, 
       },
       {
-        id: 'suspension-2',
+        id: 'Duralast Loaded Strut LS54-95161L',
         name: 'Struts',
         description: 'Supports the vehicle’s weight and provides stability.',
-        image: '/suspension.avif',
+        image: '/img4.webp',
         price: 120.00, 
       }
     ]
@@ -51,11 +51,18 @@ const carPartsData = [
     items: [
       {
         id: 'catalytic-1',
-        name: 'Standard Catalytic Converter',
+        name: ' Catalytic Converter 2.5in 51206',
         description: 'Compliant with emission standards for most vehicles.',
-        image: '/catalytic-converter.webp',
-        price: 300.00, 
-      }
+        image: '/1mg5.avif',
+        price: 195.00, 
+      },
+      {
+        id: 'catalytic-1',
+        name: 'Catalytic Converter 2.5in 51356',
+        description: 'Compliant with emission standards for most vehicles.',
+        image: '/1mg5.avif',
+        price: 200.00, 
+      },
     ]
   },
   {
@@ -66,17 +73,17 @@ const carPartsData = [
     items: [
       {
         id: 'brakes-1',
-        name: 'Brake Pad Set',
+        name: 'Duralast Gold Disc Brake',
         description: 'Provides friction for stopping the vehicle.',
-        image: '/brakes.jpg',
-        price: 80.00, 
+        image: '/imgv1.avif',
+        price: 60.00, 
       },
       {
         id: 'brakes-2',
-        name: 'Brake Discs',
+        name: 'Duralast Disc Brake Pad Set MKD914',
         description: 'Works with brake pads to stop the car.',
-        image: '/brakes.jpg',
-        price: 90.00, 
+        image: '/imgv2.avif',
+        price: 41.00, 
       }
     ]
   },
@@ -88,10 +95,17 @@ const carPartsData = [
     items: [
       {
         id: 'fuel-system-1',
-        name: 'Fuel Pump',
+        name: 'Techron Fuel System 12oz',
         description: 'Pumps fuel from the tank to the engine.',
-        image: '/fuel-pump.avif',
-        price: 75.00, 
+        image: '/imgv3.avif',
+        price: 15.00, 
+      },
+      {
+        id: 'fuel-system-1',
+        name: 'CataClean Fuel Cleaner 16.7oz',
+        description: 'Pumps fuel from the tank to the engine.',
+        image: '/a1.avif',
+        price: 15.00, 
       }
     ]
   },
@@ -103,10 +117,10 @@ const carPartsData = [
     items: [
       {
         id: 'sensors-1',
-        name: 'Oxygen Sensor',
+        name: 'Duralast Coolant Temperature Sensor SU201',
         description: 'Measures the oxygen level in exhaust gases.',
-        image: '/oxygen-sensor.avif',
-        price: 45.00, 
+        image: '/a2.avif',
+        price: 25.00, 
       }
     ]
   },
@@ -118,25 +132,25 @@ const carPartsData = [
     items: [
       {
         id: 'air-filters-1',
-        name: 'Engine Air Filter',
+        name: 'STP Panel Engine Air Filter SA8755',
         description: 'Protects the engine from debris.',
-        image: '/air-filter.avif',
+        image: '/a4.avif',
         price: 20.00, 
       }
     ]
   },
   {
-    id: 'ignition',
+    id: ' ',
     name: 'Ignition System',
     description: 'Starts the engine by igniting the fuel-air mixture.',
     image: '/ignition.avif',
     items: [
       {
         id: 'ignition-1',
-        name: 'Ignition Coils',
+        name: 'Duralast Direct Ignition Coil C1417',
         description: 'Converts the battery voltage to high voltage.',
-        image: '/ignition.avif',
-        price: 50.00, 
+        image: '/igntion.avif',
+        price: 60.00, 
       }
     ]
   },
@@ -147,26 +161,19 @@ const carPartsData = [
     image: '/interior.avif',
     items: [
       {
-        id: 'interior-1',
+        id: 'Bestop Seat 39429-01',
         name: 'Seats',
         description: 'Provides seating for passengers.',
-        image: '/seats.avif',
-        price: 200.00, 
+        image: '/seat.avif',
+        price: 250.00, 
       },
       {
         id: 'interior-2',
-        name: 'Carpets',
+        name: 'Black Carpet Floor Mat',
         description: 'Covers the floor of the car for comfort.',
-        image: '/carpets.avif',
-        price: 100.00, 
+        image: '/carpet1.avif',
+        price: 20.00, 
       },
-      {
-        id: 'interior-3',
-        name: 'Door Panels',
-        description: 'Covers the interior of the car doors.',
-        image: '/door-panels.avif',
-        price: 80.00, 
-      }
     ]
   },
   {
@@ -177,24 +184,24 @@ const carPartsData = [
     items: [
       {
         id: 'transmission-1',
-        name: 'Clutch Kits',
+        name: 'High Gear Manual Transmission Assembly',
         description: 'Facilitates engagement and disengagement of the engine.',
-        image: '/clutch.avif',
-        price: 250.00, 
+        image: '/ig1.avif',
+        price: 1150.00, 
       },
       {
         id: 'transmission-2',
-        name: 'Torque Converters',
+        name: 'High Gear Manual Transmission Assemblys',
         description: 'Transfers engine power to the transmission.',
-        image: '/torque-converter.avif',
-        price: 300.00, 
+        image: '/ig2.avif',
+        price: 3500.00, 
       },
       {
         id: 'transmission-3',
-        name: 'Shifters',
+        name: 'High Gear Manual Transmission ',
         description: 'Allows the driver to change gears.',
-        image: '/shifter.avif',
-        price: 70.00, 
+        image: '/ig3.avif',
+        price: 1300.00, 
       }
     ]
   },
@@ -202,29 +209,22 @@ const carPartsData = [
     id: 'exterior',
     name: 'Exterior Parts',
     description: 'Components that form the outer structure of the car.',
-    image: '/exterior.avif',
+    image: '/ext.webp',
     items: [
       {
         id: 'exterior-1',
-        name: 'Hoods',
+        name: 'American Modified Hood',
         description: 'Covers the engine compartment.',
-        image: '/hood.avif',
-        price: 400.00, 
+        image: '/hood1.avif',
+        price: 500.00, 
       },
       {
-        id: 'exterior-2',
-        name: 'Bumpers',
-        description: 'Protects the car in minor collisions.',
-        image: '/bumper.avif',
-        price: 150.00, 
+        id: 'exterior-1',
+        name: 'Crown Automotive Jeep  Hood',
+        description: 'Covers the engine compartment.',
+        image: '/hood2.avif',
+        price: 500.00, 
       },
-      {
-        id: 'exterior-3',
-        name: 'Fenders',
-        description: 'Prevents road debris from being thrown by tires.',
-        image: '/fender.avif',
-        price: 120.00, 
-      }
     ]
   },
   {
@@ -232,81 +232,90 @@ const carPartsData = [
     name: 'Wheels and Tires',
     description: 'Supports vehicle movement and grip.',
     image: '/wheels.avif',
-    items: [
+    "items": [
       {
-        id: 'wheels-1',
-        name: 'Alloy Wheels',
-        description: 'Lighter wheels that improve performance.',
-        image: '/alloy-wheels.avif',
-        price: 300.00, 
+        "id": "wheels-1",
+        "name": "LKQ Wheel STLFD065U15N",
+        "description": "",
+        "image": "/wheel1.avif",
+        "price": 245.99
       },
       {
-        id: 'wheels-2',
-        name: 'Performance Tires',
-        description: 'Designed for enhanced traction and speed.',
-        image: '/performance-tires.avif',
-        price: 150.00, 
-      }
-    ]
-  },
-  {
-    id: 'filters',
-    name: 'Filters',
-    description: 'Keeps contaminants out of various car systems.',
-    image: '/filters.avif',
-    items: [
+        "id": "wheels-2",
+        "name": "LKQ Wheel STLTP022U45",
+        "description": "",
+        "image": "/wheel2.avif",
+        "price": 139.99
+      },
       {
-        id: 'filters-1',
-        name: 'Cabin Air Filter',
-        description: 'Filters air entering the cabin.',
-        image: '/cabin-filter.avif',
-        price: 25.00, 
+        "id": "wheels-3",
+        "name": "Supreme Collision Parts Group Wheel ALYHW034U30",
+        "description": "",
+        "image": "/wheel3.avif",
+        "price": 314.99
       }
     ]
   },
+
   {
     id: 'lighting',
     name: 'Lighting Products',
     description: 'Provides visibility and safety.',
     image: '/lighting.avif',
-    items: [
-      {
-        id: 'lighting-1',
-        name: 'Headlights',
-        description: 'Illuminates the road ahead at night.',
-        image: '/headlights.avif',
-        price: 80.00, 
-      },
-      {
-        id: 'lighting-2',
-        name: 'Taillights',
-        description: 'Signals to drivers behind you.',
-        image: '/taillights.avif',
-        price: 50.00, 
-      }
-    ]
+    
+      items: [
+        {
+          "id": "lighting-1",
+          "name": "Blazer International C6423 Trailer Light Kit",
+          "description": "",
+          "image": "/ligth1.avif",
+          "price": 27.99
+        },
+        {
+          "id": "lighting-2",
+          "name": "Hopkins Towing Solution Multi-Purpose Trailer Light",
+          "description": "",
+          "image": "/ligth2.avif",
+          "price": 8.99
+        },
+        {
+          "id": "lighting-3",
+          "name": "Hopkins Towing Solution Stop, Tail, and Turn Trailer Light",
+          "description": "",
+          "image": "/light3.avif",
+          "price": 8.99
+        }
+      ]   
   },
   {
     id: 'mirrors',
     name: 'Mirrors',
     description: 'Helps drivers see surrounding traffic.',
     image: '/mirrors.avif',
-    items: [
-      {
-        id: 'mirrors-1',
-        name: 'Side Mirrors',
-        description: 'Provides visibility to the side of the vehicle.',
-        image: '/side-mirrors.avif',
-        price: 60.00, 
-      },
-      {
-        id: 'mirrors-2',
-        name: 'Rearview Mirror',
-        description: 'Allows the driver to see behind the car.',
-        image: '/rearview-mirror.avif',
-        price: 40.00, 
-      }
-    ]
+    
+      "items": [
+        {
+          "id": "mirrors-1",
+          "name": "K-Source 7in x 10in Lens Cut to Fit Replacement Glass",
+          "description": "",
+          "image": "/mirror1.avif",
+          "price": 12.99
+        },
+        {
+          "id": "mirrors-2",
+          "name": "K-Source 7 1/2in x 10 1/2in Chrome, 3 Point Mount",
+          "description": "",
+          "image": "/mirror2.avif",
+          "price": 22.49
+        },
+        {
+          "id": "mirrors-3",
+          "name": "Pilot Universal Port Mirror",
+          "description": "",
+          "image": "/mirror3.avif",
+          "price": 8.00
+        }
+      ]   
   }
 ];
 
