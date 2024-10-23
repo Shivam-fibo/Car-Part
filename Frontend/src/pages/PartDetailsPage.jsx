@@ -31,6 +31,7 @@ const PartDetailsPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+
     emailjs.send(
       import.meta.env.VITE_EMAILJS_SERVICE_ID, 
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID_ORDER, 
@@ -42,8 +43,10 @@ const PartDetailsPage = () => {
         user_address: formData.address,
         user_mobile: formData.mobileNumber,
         item_name: item.name,
-        item_price: item.price
+        item_price: item.price,
+        to_email: 'shivamkgupta6418@gmail.com' ,
       }, 
+   
       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
     .then((response) => {
@@ -54,6 +57,7 @@ const PartDetailsPage = () => {
       toast.error('Failed to send order. Please try again.');
       console.error('EmailJS Error:', error);
     });
+  
   }
 
   return (

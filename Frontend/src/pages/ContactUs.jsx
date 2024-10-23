@@ -45,7 +45,7 @@ const ContactUs = () => {
             <div className="ml-4">
               <h4 className="text-gray-800 text-base font-semibold">Chat to us</h4>
               <p className="text-xs mt-1">Chat with our team to help.</p>
-              <p className="text-sm mt-4">example@gmail.com</p>
+              <p className="text-sm mt-4">sparepartshub2@gmail.com</p>
             </div>
           </div>
           {/* Visit Us */}
@@ -72,7 +72,7 @@ const ContactUs = () => {
             <div className="ml-4">
               <h4 className="text-gray-800 text-base font-semibold">Call us</h4>
               <p className="text-xs mt-1">Monday to Friday.</p>
-              <p className="text-sm mt-4">+158 996 888</p>
+              <p className="text-sm mt-4">+237 671393870</p>
             </div>
           </div>
         </div>
