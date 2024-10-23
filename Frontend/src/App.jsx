@@ -9,9 +9,11 @@ import ContactUs from './pages/ContactUs';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import AboutUs from './pages/AboutUs';
 import CarPartSelector from './components/CarPartSelector';
+import {Toaster} from 'react-hot-toast'
 
 function App() {
   return (
+    <>
     <Router>
       <Navbar />
       <Routes>
@@ -25,6 +27,8 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+    <Toaster position="top-right" />
+    </>
   );
 }
 

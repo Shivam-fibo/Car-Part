@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import carPartsData from '../data/carPartsData';
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-hot-toast';
 
 const PartDetailsPage = () => {
   const { itemId } = useParams();
@@ -11,7 +12,7 @@ const PartDetailsPage = () => {
     name: '',
     email: '',
     address: '',
-    mobileNumber: '' // Added mobileNumber field
+    mobileNumber: '' 
   });
 
   useEffect(() => {
@@ -39,18 +40,18 @@ const PartDetailsPage = () => {
         user_name: formData.name,
         user_email: formData.email,
         user_address: formData.address,
-        user_mobile: formData.mobileNumber, // Include mobile number in the email template
+        user_mobile: formData.mobileNumber,
         item_name: item.name,
         item_price: item.price
       }, 
       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
     .then((response) => {
-      alert('Order sent successfully!');
+      toast.success('Order sent successfully!');
       setIsFormOpen(false);
     })
     .catch((error) => {
-      alert('Failed to send order. Please try again.');
+      toast.error('Failed to send order. Please try again.');
       console.error('EmailJS Error:', error);
     });
   }

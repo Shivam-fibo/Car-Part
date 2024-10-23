@@ -17,11 +17,13 @@ const ContactUs = () => {
       .then(
         (result) => {
           console.log('SUCCESS!', result.text);
-          alert('Message sent successfully!');
+   
+          toast.success('Message sent successfully!')
         },
         (error) => {
           console.log('FAILED...', error.text);
-          alert('Failed to send message, please try again later.');
+          toast.error('Failed to send message, please try again later.');
+      
         }
       );
   };
