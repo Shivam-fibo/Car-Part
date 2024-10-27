@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import carPartsData from '../data/carPartsData';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-hot-toast';
+import axios from 'axios';
 
 const PartDetailsPage = () => {
   const { itemId } = useParams();
@@ -12,7 +13,7 @@ const PartDetailsPage = () => {
     name: '',
     email: '',
     address: '',
-    mobileNumber: '' 
+    mobileNumber: ''
   });
 
   useEffect(() => {
@@ -31,7 +32,24 @@ const PartDetailsPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Sending data to the backend API
+    axios.post('https://admin-portal-cyan-three.vercel.app/api/userInfo', {
+      name: formData.name,
+      email: formData.email,
+      address: formData.address,
+      mobileNumber: formData.mobileNumber,
+      itemName: item.name,
+      itemPrice: item.price
+    })
+    .then(() => {
+      // toast.success('Data sent to the server successfully!');
+    })
+    .catch((error) => {
+      // toast.error('Failed to send data to the server.');
+      console.error('API Error:', error);
+    });
 
+    // EmailJS configuration
     emailjs.send(
       import.meta.env.VITE_EMAILJS_SERVICE_ID, 
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID_ORDER, 
@@ -44,12 +62,11 @@ const PartDetailsPage = () => {
         user_mobile: formData.mobileNumber,
         item_name: item.name,
         item_price: item.price,
-        to_email: 'shivamkgupta6418@gmail.com' ,
+        to_email: 'shivamkgupta6418@gmail.com',
       }, 
-   
       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
-    .then((response) => {
+    .then(() => {
       toast.success('Order sent successfully!');
       setIsFormOpen(false);
     })
@@ -57,8 +74,7 @@ const PartDetailsPage = () => {
       toast.error('Failed to send order. Please try again.');
       console.error('EmailJS Error:', error);
     });
-  
-  }
+  };
 
   return (
     <div className="part-details-page max-w-3xl mt-24 mx-auto p-8 mb-48 bg-gradient-to-r from-white to-gray-50 rounded-3xl shadow-xl transform transition duration-500 hover:shadow-2xl hover:scale-105">
